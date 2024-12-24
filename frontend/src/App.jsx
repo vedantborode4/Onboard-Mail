@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-const backendURL = import.meta.env.VITE_BACKEND_URL
+const backendURL = String(import.meta.env.VITE_BACKEND_URL)
 
 function App() {
   const [firstName, setFirstName] = useState('')

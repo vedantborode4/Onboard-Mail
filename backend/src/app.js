@@ -7,8 +7,9 @@ const app = express()
 const allowedOrigin = process.env.CORS_ORIGIN
 
 const corsOptions = {
-  origin: allowedOrigin,
-  methods: ['GET', 'POST'],  
+  origin: allowedOrigin,  
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
