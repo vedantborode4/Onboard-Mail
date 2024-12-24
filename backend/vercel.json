@@ -8,9 +8,14 @@
     ],
     "routes": [
       {
-        "src": "/sendMail",
-        "dest": "backend/server.js"
+        "src": "/(.*)",
+        "dest": "server.js",
+        "methods": ["GET", "POST", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "https://onboard-mail.vercel.app",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
       }
     ]
   }
-  
